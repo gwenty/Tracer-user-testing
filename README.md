@@ -50,7 +50,7 @@ Give it a good try but if it doesn’t work, please do still answer the question
         *return-values* - Include the return values in the trace lines.  
 		*encode-unsigned* - Encodes the argument and return values. Encodes strings as byte arrays and converts numbers to their unsigned representation, excluding floats.
         
-    2\)	Method 2 prints any method in the instrumented classes that are executed.
+    2\)	Method 2 prints any method in the instrumented classes that are executed.  
         *visited-methods* - Will specify the use of method 2 and include the function name of the visited methods in the order they are executed.  
         
     Options that can be used with both methods:  
