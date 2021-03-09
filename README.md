@@ -17,7 +17,9 @@ Give it a good try but if it doesn’t work, please do still answer the question
 
 2.	Try running the program to be traced from the command line. 
 
-    Example program 1 is run by running the main method in StationStatistics.
+    Example program 1 is run by running the main method in StationStatistics and needs the location of the rstats2019.xyz file as its input argument. For example:
+	
+	java StationStatistics ./rstats2019.xyz
 	
 	The tests of example program 2 is run by the main method in RunSomeTests. The junit jar, the class folder (where org is found, the base of the package), and the folder of the test classes need to be in the java classpath. For example, from the example_program_1 directory, 
 
@@ -25,7 +27,7 @@ Give it a good try but if it doesn’t work, please do still answer the question
 
     On Windows, the path separator for the class path is the semi-colon ; and you might need to enclose the class path in quotation marks “”. 
 
-    Before moving on, remove the pass and fail folders and the timing and notincluded files. To avoid saving the trace files of example program 1 which might get large later, you can add the option *no-saving* at the end of the command. 
+    Before moving on, remove the pass and fail folders and the timing and notincluded files. 
 3.	Run the tracing tool on the program class files:
 
 	java -jar Tracer.jar [trace options] [soot options]
@@ -34,7 +36,7 @@ Give it a good try but if it doesn’t work, please do still answer the question
 
 	java -jar Tracer.jar [trace options] -cp .program/classes -process-dir .program/classes
 
-    The soot classpath needs to point to the folder which contains the classes to be instrumented. If you are instrumenting a package or classes in a package, the soot class path should point to the folder that contains the base of the package.
+    The soot classpath needs to point to the folder which contains the classes to be instrumented (example_program_1 for the first program). If you are instrumenting a package or classes in a package, the soot class path should point to the folder that contains the base of the package (example_program_2/classes for the second program).
     
     You can optionally specify the directory where the instrumented class files will end up using the *-ouput-dir* option.
 	
