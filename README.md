@@ -7,7 +7,7 @@ The goal of this tool is to record the execution of a Java program as it is bein
 ## User survey
 Please try using the tool following the instructions below and take note of how long the commands take to run. Then answer some short questions in this form: https://forms.gle/o7RS2b1SeiQedTZx6
 
-Two example programs to instrument. Example program 1 is a small program from http://www.wellho.net/resources/ex.php4?item=j713/d2x.java with 3 class files that processes railway statistics. Example program 2 is Commons Lang (https://commons.apache.org/proper/commons-lang/) and is accompanied by a set of tests and RunSomeTests.class that will run the tests and save the trace of each test to a file.
+There are two example programs to instrument. Example program 1 is a small program from http://www.wellho.net/resources/ex.php4?item=j713/d2x.java with 3 class files that processes railway statistics. Example program 2 is Commons Lang (https://commons.apache.org/proper/commons-lang/) and is accompanied by a set of tests and RunSomeTests.class that will run the tests and save the trace of each test to a file.
 
 Give it a good try but if it doesn’t work, please do still fill out the form.
 ## Running the tracing tool
