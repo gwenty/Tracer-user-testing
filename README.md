@@ -3,7 +3,7 @@
 # Java Tracer
 ---
 ## Goal of the tool
-The goal of this tool is to record the execution of a Java program as it is being run.
+The goal of this tool is to record the execution of a Java program as it is being run. For example, the produced traces can keep track of which methods were called and what values were sent when the program ran. This can tehn be used for program analysis such as finding bugs.
 ## User survey
 Please try using the tool following the instructions below. Then answer some short questions in this form: https://forms.gle/o7RS2b1SeiQedTZx6
 
@@ -36,27 +36,40 @@ You will need Java to run the tool. It is compiled with Java 8 and should also w
     	
 	For more Soot options see: https://soot-build.cs.uni-paderborn.de/public/origin/develop/soot/soot-develop/options/soot_options.htm 
     
-    **Trace options:** There are two methods of tracing. Not specifying any trace options will result in tracing method invocations with arguments and return values. 
+    **Trace options:** There are two methods of tracing. Not specifying any trace options will result in tracing method invocations with arguments and return values.
     
-    1\)	Method 1 traces the method invocations in the order that they return to the caller method.  
-        *invocations*  - Include the caller and callee method names in the trace lines.  
-        *arguments* - Include the arguments values in the trace lines.  
-        *return-values* - Include the return values in the trace lines.  
-		*encode-unsigned* - Encodes the argument and return values. Encodes strings as byte arrays and converts numbers to their unsigned representation, excluding floats.
+    1\)	Method 1 traces the method invocations in the order that they return to the caller method. 
+        *invocations*  - Include the caller and callee method names in the trace lines. 
+        *arguments* - Include the arguments values in the trace lines. 
+        *return-values* - Include the return values in the trace lines. 
+		*encode-unsigned* - Encodes the argument and return values. Encodes strings as byte arrays and converts numbers to their unsigned representation, excluding floats. 
+		
+	For example, java -jar Tracer.jar invocations arguments -cp ./example_program_1/classes -process-dir ./example_program_1/classes should produce something like:\
+		main <init> , rstats2019.xyz \
+		main readLine , \
+		factory <init> , ABD Aberdeen 3170226 \
+		main factory , 8976     ABD     AB11 6LX  ... 
         
-    2\)	Method 2 prints any method in the instrumented classes that are executed.  
+    2\)	Method 2 prints any method in the instrumented classes that are executed.
         *visited-methods* - Will specify the use of method 2 and include the function name of the visited methods in the order they are executed.  
+	
+	For example, java -jar Tracer.jar visited-methods -cp ./example_program_1/classes -process-dir ./example_program_1/classes should produce:\
+	main\
+	\<init\>\
+	readLine\
+	factory\
+	...
        
     Options that can be used with both methods:  
 		*include-class* - Write the methods as: Class.method name.  
 		
 4.	Run the compiled output example program like in step 2, but pointing the classpath to the sootOutput folder:
 
-	For example program 1: \
+	For example program 1: It should only take a few seconds to run. \
 		Linux: java -cp ../sootOutput:. RunStationStatistics rstats2019.xyz \
 		Windows: java -cp "../sootOutput;." RunStationStatistics rstats2019.xyz
 	
-	For example program 2: \
+	For example program 2: Just under 1000 files should be created but it should not take more than one or a few minutes to run. \
 	    Linux : java -cp junit-platform-console-standalone-1.7.0.jar:.:../sootOutput:test-classes/ RunSomeTests \
 	    Windows: java -cp "junit-platform-console-standalone-1.7.0.jar;.;../sootOutput;test-classes/" RunSomeTests
 
