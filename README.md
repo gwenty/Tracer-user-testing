@@ -70,9 +70,8 @@ You will need Java to run the tool. It is compiled with Java 8 and should also w
 ### Directory structure
 * Tracer.jar the Tracer tool
 * example_program_1
-    * StationStatistics.class used to run the program
-    * Stations.class used by StationStatistics 
-    * MyStream.class used by StationStatistics
+    * RunStationStatistics.class used to run the program
+    * classes contains the classes that RunStationStatistics uses to run the program
     * rstats2019.xyz contains the data used by the program
 * example_program_2
     * RunSomeTests.class used to run the tests
@@ -80,4 +79,5 @@ You will need Java to run the tool. It is compiled with Java 8 and should also w
     * classes contains the package with the program class files
     * test-classes contains the package with tests
     * junit-platform-console-standalone-1.7.0.jar include in the classpath to run the tests
+* sootOutput where the instrumented classes will appear
 
