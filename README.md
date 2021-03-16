@@ -53,8 +53,8 @@ You will need Java to run the tool. It is compiled with Java 8 and should also w
 	For example program 1, you will need to copy the data file rstats2019.xyz for example program 1 into sootOutput. Then run the same command as before, but inside the sootOutput folder: java StationStatistics ./rstats2019.xyz
 	
 	For example program 2, you need to modify the classpath to point to the new classes in sootOutput, but still run the command from the original program folder: \
-	    Linux : java -cp junit-platform-console-standalone-1.7.0.jar:.:sootOutput:test-classes/ RunSomeTests \
-	    Windows: java -cp "junit-platform-console-standalone-1.7.0.jar;.;sootOutput;test-classes/" RunSomeTests
+	    Linux : java -cp junit-platform-console-standalone-1.7.0.jar:.:../sootOutput:test-classes/ RunSomeTests \
+	    Windows: java -cp "junit-platform-console-standalone-1.7.0.jar;.;../sootOutput;test-classes/" RunSomeTests
 
 
 
