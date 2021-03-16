@@ -18,7 +18,9 @@ You will need Java to run the tool. It is compiled with Java 8 and should also w
 
 2.	Try running the programs to be traced from the command line. 
 
-    Example program 1: java StationStatistics ./rstats2019.xyz
+    Example program 1: \
+		Linux: java -cp classes:. RunStationStatistics rstats2019.xyz \
+		Windows: java -cp "classes;." RunStationStatistics rstats2019.xyz
 	
 	Example program 2: \
 	    Linux : java -cp junit-platform-console-standalone-1.7.0.jar:.:classes:test-classes/ RunSomeTests \
@@ -29,7 +31,7 @@ You will need Java to run the tool. It is compiled with Java 8 and should also w
 3.	Run the tracing tool on the program class files: java -jar Tracer.jar [trace options] [soot options] (see the example below)
 
     **Soot options:** You can use the soot option -process-dir to instrument all class files in a directory. Do this form the base directory, where Tracer.jar is. Replace [trace options] with the options described below or leave it blank. \
-	java -jar Tracer.jar [trace options] -cp ./example_program_1 -process-dir ./example_program_1 \
+	java -jar Tracer.jar [trace options] -cp ./example_program_1/classes -process-dir ./example_program_1/classes \
 	java -jar Tracer.jar [trace options] -cp ./example_program_2/classes -process-dir ./example_program_2/classes
     	
 	For more Soot options see: https://soot-build.cs.uni-paderborn.de/public/origin/develop/soot/soot-develop/options/soot_options.htm 
@@ -48,9 +50,11 @@ You will need Java to run the tool. It is compiled with Java 8 and should also w
     Options that can be used with both methods:  
 		*include-class* - Write the methods as: Class.method name.  
 		
-4.	Run the compiled output example program, found in the sootOutput folder.
+4.	Run the compiled output example program, by pointing the classpath to the sootOutput folder.
 
-	For example program 1, you will need to copy the data file rstats2019.xyz for example program 1 into sootOutput. Then run the same command as before, but inside the sootOutput folder: java StationStatistics ./rstats2019.xyz
+	For example program 1, 
+		Linux: java -cp ../sootOutput:. RunStationStatistics rstats2019.xyz \
+		Windows: java -cp "../sootOutput;." RunStationStatistics rstats2019.xyz
 	
 	For example program 2, you need to modify the classpath to point to the new classes in sootOutput, but still run the command from the original program folder: \
 	    Linux : java -cp junit-platform-console-standalone-1.7.0.jar:.:../sootOutput:test-classes/ RunSomeTests \
