@@ -30,7 +30,7 @@ You will need Java to run the tool. It is compiled with Java 8 and should also w
 
 3.	Run the tracing tool on the program class files: java -jar Tracer.jar [trace options] [soot options] (see the example below)
 
-    **Soot options:** You can use the soot option -process-dir to instrument all class files in a directory. Do this form the base directory, where Tracer.jar is. Replace [trace options] with the options described below or leave it blank. \
+    **Soot options:** You can use the soot option -process-dir to instrument all class files in a directory. Do this form the base directory, where Tracer.jar is. Replace [trace options] with the options described in the Trace options section below or leave it blank. \
 	java -jar Tracer.jar [trace options] -cp ./example_program_1/classes -process-dir ./example_program_1/classes \
 	java -jar Tracer.jar [trace options] -cp ./example_program_2/classes -process-dir ./example_program_2/classes
     	
