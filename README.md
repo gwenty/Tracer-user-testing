@@ -3,7 +3,7 @@
 # Java Tracer
 ---
 ## Goal of the tool
-The goal of this tool is to record the execution of a Java program as it is being run. For example, the produced traces can keep track of which methods were called and what values were sent when the program ran. This can tehn be used for program analysis such as finding bugs.
+The goal of this tool is to record the execution of a Java program as it is being run. For example, the produced traces can keep track of which methods were called and what values were sent when the program ran. This can then be used for program analysis such as finding bugs.
 ## User survey
 Please try using the tool following the instructions below. Then answer some short questions in this form: https://forms.gle/o7RS2b1SeiQedTZx6
 
