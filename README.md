@@ -3,7 +3,7 @@
 # Java Tracer
 ---
 ## Goal of the tool
-The goal of this tool is to record the execution of a Java program as it is being run. For example, the produced traces can keep track of which methods were called and what values were sent when the program ran. This can then be used for program analysis such as finding bugs.
+The goal of this tool is to instrument a Java program so that it will produce execution traces when run. The produced traces can  for instance keep track of which methods were called and what values were sent when the program ran. This can then be used for program analysis such as finding bugs.
 ## User survey
 Please try using the tool following the instructions below. Then answer some short questions in this form: https://forms.gle/o7RS2b1SeiQedTZx6
 
@@ -28,7 +28,7 @@ You will need Java to run the tool. It is compiled with Java 8 and should also w
 	
 	Before moving on, remove the folder/files pass, fail, and notincluded. 
 
-3.	Run the tracing tool on the program class files: java -jar Tracer.jar [trace options] [soot options] (see the example below). This step only instruments the programs, the traces will be produced when you run the example programs again in step 4.
+3.	Run the tracing tool to instrument the program class files: java -jar Tracer.jar [trace options] [soot options] (see the example below). This step only instruments the programs, the traces will be produced when you run the example programs again in step 4.
 
     **Soot options:** You can use the soot option -process-dir to instrument all class files in a directory. Do this from the base directory, where Tracer.jar is. Replace [trace options] with the options described in the Trace options section below or leave it blank. \
 	java -jar Tracer.jar [trace options] -cp ./example_program_1/classes -process-dir ./example_program_1/classes \
