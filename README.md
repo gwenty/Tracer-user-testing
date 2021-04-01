@@ -28,7 +28,7 @@ You will need Java to run the tool. It is compiled with Java 8 and should also w
 	
 	Before moving on, remove the folder/files pass, fail, and notincluded. 
 
-3.	Run the tracing tool on the program class files: java -jar Tracer.jar [trace options] [soot options] (see the example below). This step only instruments the programs, the traces will be produced when you run the example programs again in the next step.
+3.	Run the tracing tool on the program class files: java -jar Tracer.jar [trace options] [soot options] (see the example below). This step only instruments the programs, the traces will be produced when you run the example programs again in step 4.
 
     **Soot options:** You can use the soot option -process-dir to instrument all class files in a directory. Do this from the base directory, where Tracer.jar is. Replace [trace options] with the options described in the Trace options section below or leave it blank. \
 	java -jar Tracer.jar [trace options] -cp ./example_program_1/classes -process-dir ./example_program_1/classes \
@@ -63,7 +63,7 @@ You will need Java to run the tool. It is compiled with Java 8 and should also w
     Options that can be used with both methods:  
 		*include-class* - Write the methods as: Class.method name.  
 		
-4.	Run the compiled output example program like in step 2 form the original program folder, but pointing the classpath to the sootOutput folder:
+4.	Produce the traces: Run the compiled output example program like in step 2 form the original program folder, but pointing the classpath to the sootOutput folder:
 
 	For example program 1: It should only take a few seconds to run. \
 		Linux: java -cp ../sootOutput:. RunStationStatistics rstats2019.xyz \
