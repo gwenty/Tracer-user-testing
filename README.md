@@ -12,7 +12,7 @@ There are two example programs to instrument. Example program 1 is a small progr
 Give it a good try but if it doesn’t work, please do still fill out the form.
 ## Running the tracing tool
 
-You will need Java to run the tool. It is compiled with Java 8 and should also work with later versions.
+You will need Java to run the tool. It is compiled with Java 8 and requires **Java version 8-15**. Note: **Java 16 will not work.**
 
 1.	Download the tracing tool.
 
